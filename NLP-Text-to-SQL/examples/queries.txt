@@ -1,0 +1,5 @@
+Show me titles and price of fantasy books under $20.
+List books by J.K. Rowling.
+How many books published after 2010?
+Top 5 most expensive books.
+Find all books by 'George Orwell' in 1949.
