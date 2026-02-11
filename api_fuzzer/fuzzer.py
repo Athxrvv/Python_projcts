@@ -222,7 +222,7 @@ class APIFuzzer:
             # Try to parse response body
             try:
                 result["response_body"] = response.json()
-            except (ValueError, json.JSONDecodeError):
+            except json.JSONDecodeError:
                 result["response_body"] = response.text[:500]  # Truncate long responses
             
             # Analyze response for issues

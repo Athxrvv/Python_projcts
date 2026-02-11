@@ -83,7 +83,7 @@ class TestAPIFuzzer:
         """Test request with server error"""
         mock_response = Mock()
         mock_response.status_code = 500
-        mock_response.json.side_effect = ValueError("No JSON")
+        mock_response.json.side_effect = json.JSONDecodeError("No JSON", "", 0)
         mock_response.text = "Internal Server Error"
         mock_post.return_value = mock_response
         
@@ -136,7 +136,7 @@ class TestAPIFuzzer:
         mock_response = Mock()
         mock_response.status_code = 200
         mock_response.text = "Exception at line 42: Stack trace follows..."
-        mock_response.json.side_effect = ValueError("No JSON")
+        mock_response.json.side_effect = json.JSONDecodeError("No JSON", "", 0)
         mock_post.return_value = mock_response
         
         fuzzer = APIFuzzer(base_url="https://api.example.com")
