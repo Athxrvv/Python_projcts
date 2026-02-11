@@ -116,7 +116,7 @@ The tests validate:
 - Required fields presence
 - Data quality
 
-For more details, see the [Bulletproof Scraper README](bulletproof_scraper/readme)
+For more details, see the [Bulletproof Scraper README](bulletproof_scraper/README.md)
 
 ---
 
