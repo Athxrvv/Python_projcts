@@ -113,6 +113,8 @@ A self-validating web scraper with automated testing that scrapes book data from
    python scraper.py
    ```
    This will scrape book data and save it to `books.csv`
+   
+   **Note:** Internet connection required to access http://books.toscrape.com/
 
 6. **Run tests:**
    ```bash

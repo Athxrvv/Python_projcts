@@ -41,6 +41,7 @@ ENV/
 Thumbs.db
 
 # Database
+*.db
 *.db-journal
 
 # CSV output files

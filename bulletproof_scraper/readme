@@ -45,3 +45,110 @@ This project builds a **“Bulletproof Scraper”** that:
 
 ## 📁 Project Structure
 
+```
+bulletproof_scraper/
+├── scraper.py           # Main scraper script
+├── test_scraper.py      # Automated tests
+├── utils.py             # Helper functions
+├── requirements.txt     # Python dependencies
+└── books.csv           # Output file (generated)
+```
+
+---
+
+## 🚀 Quick Start
+
+### 1. Create a Virtual Environment
+```bash
+python -m venv .venv
+```
+
+### 2. Activate Virtual Environment
+- On Linux/Mac:
+  ```bash
+  source .venv/bin/activate
+  ```
+- On Windows:
+  ```bash
+  .venv\Scripts\activate
+  ```
+
+### 3. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Run the Scraper
+```bash
+python scraper.py
+```
+
+This will:
+- Scrape product data from http://books.toscrape.com/
+- Save results to `books.csv`
+- Display progress in the terminal
+
+**Note:** Internet connection required!
+
+### 5. Run Tests
+```bash
+pytest test_scraper.py -v
+```
+
+This will:
+- Test data quality
+- Verify scraping functionality
+- Catch potential issues early
+
+---
+
+## 📝 Output
+
+The scraper creates `books.csv` with columns:
+- **title** - Book title
+- **price** - Price in pounds (£)
+- **image_url** - Product image URL
+
+---
+
+## 🎯 Key Features
+
+- ✅ **Robust Error Handling** - Handles network failures gracefully
+- ✅ **Automated Testing** - Pytest tests ensure data quality
+- ✅ **Data Validation** - Tests check for expected data format
+- ✅ **CSV Export** - Clean, structured data output
+- ✅ **Configurable** - Easy to modify pages to scrape
+
+---
+
+## 🧪 What the Tests Check
+
+1. Data structure is correct
+2. All required fields are present
+3. Price format is valid
+4. No empty or null values
+5. Reasonable number of results
+
+---
+
+## 🔧 Troubleshooting
+
+### Issue: Network errors
+**Solution:** Check your internet connection and ensure http://books.toscrape.com/ is accessible
+
+### Issue: Tests fail
+**Solution:** This usually means the website structure changed. Review the scraper logic and update selectors.
+
+### Issue: Empty CSV file
+**Solution:** Website may be down or blocking requests. Try again later.
+
+---
+
+## 📚 Learning Notes
+
+This project demonstrates:
+- Web scraping with `requests` and `BeautifulSoup`
+- Test-driven development with `pytest`
+- CSV data export
+- Error handling best practices
+- Virtual environment management
